@@ -1,0 +1,132 @@
+
+body {
+    background:#0A1046;
+}
+
+header{
+  background: #131A57;
+  text-align: center;
+  padding: 20px;
+  height: 25%;
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+}
+
+.h1 {
+  font-size: 50pt;
+  margin-bottom: 50px;
+}
+
+.card{
+  min-width:320px;
+  max-width:50%;
+  min-height:80%;
+  margin:auto;
+  box-shadow: 0 0 5px rgba(0,0,0);
+  margin-top:-20px;
+}
+
+.card-body{
+  margin: 0;
+  padding: 0;
+  background-color:rgba(157,238,176,0.1);
+  text-align: left;
+}
+
+.card-title{
+  margin: 10px;
+}
+
+#start-button,#get-table,#stop-button,#attendance-over{
+  width:45%;
+  height: 70px;
+  margin-top: 50px;
+  color: white;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
+#video-content{
+  text-align: center;
+  position: static;
+  min-height: 600px;
+  max-height: 1280px;
+  margin: auto;
+  display:none;
+  outline: blue;
+  margin-top: 50px;
+}
+
+#video{
+  transform: scaleX(-1);
+  margin:auto;
+}
+
+#confirmed-attendance{
+  display:none;
+  transition: 0.5s;
+}
+
+
+.main-button{
+  width:350px;
+  height: 150px;
+  outline:none;
+  border: none;
+  font-size: 25pt;
+  color: gainsboro;
+  border-radius: 10px;
+  font-weight: bold;
+  transition:0.5s;
+  margin-top: 5%;
+}
+
+#student{
+  font-size: 20pt;
+  color:white;
+}
+
+.btn-div{
+  left:0%;
+  display: block;
+  text-align: center;
+  width:100%;
+  height:20%;
+}
+
+.main-content{
+  padding: 20px;
+  display: block;
+  min-width: 320px;
+  max-width: 800px;
+  text-align: center;
+  transition: 0.5s;
+  margin:auto;
+  
+}
+
+#time{
+  font-size: 45pt;
+  margin-bottom: 20px;
+  color:white;
+}
+
+
+#init-button{
+  min-width: 320px;
+  max-width: 800px;
+  text-align: center;
+  transition: 0.5s;
+  margin:auto;
+  display: block;
+}
+
+#table{
+  text-align: center;
+  font-size: 20pt;
+  min-width: 320px;
+  max-width: 100%;
+  margin: auto;
+  font-family: sans-serif;
+  color:white;
+}
+
