@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style1.css">
+  <title>Qr Attendance</title>
+  <script src="javascript/Modules/qr-scanner.umd.min.js"></script>
+  <script type="text/javascript" src="javascript/script.js"></script>
+  <script src="javascript/database.js"></script>
+</head>
+
+<body>
+  <audio id="present">
+    <source src="media/presente.ogg" type="audio/ogg">
+  </audio>
+  
+  <header>
+    <div>
+      <h1 style="color:white;">2° Ano - Informática</h1>
+    </div>
+  </header>
+  
+  <div id="video-content">
+     <video id="video"></video>
+  </div>
+  
+  <main class="main-content">
+    
+    <div style="margin-top:30px;margin-bottom:50px;">
+      <h2 id="time">7:30am</h2>
+      <h4 style="color:white;">Terça feira</h4>
+    </div>
+    
+    <div class="card">
+      <div class="card-body" id="class">
+        <img src="media/math.png" class="card-img-top">
+        <h2 class="card-title">Matemática</h2><br>
+        <h2 class="card-title">Professor:Abner</h2>
+      </div>
+    </div>
+    
+  </main>
+  
+  <div style="text-align:center;display:none;" id="table" class="table-responsive">
+    <table class="table table-striped table-dark" style="border-collapse:colapse;">
+      <thead style="border-bottom:2px solid rgba(255,255,255,0.7)">
+        <tr class="table-primary">
+          <th style="border-right:2px solid rgba(30,70,240,0.2);">Aluno</th>
+          <th>Presença</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="btn-div" id="btn-div">
+    <div id="confirmed-attendance">
+      <h3 style="font-size:25pt;color:white">Presença Confirmada:</h3>
+      <p id="student">Nome do Aluno</p>
+    </div>
+    <div id="init-button">
+      <button id="get-table" class="btn btn-default btn-lg" onclick="show_table(students_confirmed,students,document.getElementById('table'),document.querySelector('main'),document.getElementById('btn-div'))" class="main-button" style="background-color:#6600CC;position:relative;display:none;">Ver Alunos presentes</button><br>
+      <button id="start-button" class="btn btn-success btn-lg">Iniciar Frequência</button>
+    </div>
+  </div>
+
+  <script>
+  let date = new Date();
+  let hour = date.getHours();
+  let minute = date.getMinutes();
+  let thenten = minute < 10?'0' + minute:minute;
+  document.getElementById('time').innerHTML = hour + ':' + thenten;
+  let main_content = document.querySelector('main');
+  let get_table = document.getElementById('get-table');
+  let students_confirmed = [];
+  Init(document.getElementById('video'),document.getElementById('start-button'),document.getElementById('present'),main_content,students_confirmed)
+  </script>
+</body>
+</html>
