@@ -27,7 +27,6 @@ function show_table(array1,array2,table,element1,element2){
 		let text1 = document.createTextNode(`${array2[element][1]}`);
 		let text2 = document.createTextNode('P');
 		let text3 = document.createTextNode('F');
-				
 		table_attendance.appendChild(text3);
 		table_name.appendChild(text1);
 				
