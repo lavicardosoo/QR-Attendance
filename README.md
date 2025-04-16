@@ -1,3 +1,3 @@
 # QR-Attendance
 
-<a href="https://lavnisy.github.io/QR-Attendance/" >Veja Aqui</a>
+<a href="https://lavicardosoo.github.io/QR-Attendance/" >Veja Aqui</a>
